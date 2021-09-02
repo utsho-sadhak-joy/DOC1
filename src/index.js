@@ -6,31 +6,59 @@ import ReactDOM from 'react-dom';
 // const joy = <h1>I love you {200*2 } </h1>;
 
 
-function defination(para){
-  return para.love + '' + para.sexy;
-}
 
 
 
-const para = {
-  love : 'Sadia',
-  sexy : 'kiss',
 
+function utsho (roy) {
+  return roy.I + ' ' + roy.love + ' ' + roy.you
 };
 
 
-const waw = (
-  <h1>{defination(para)}</h1>
+
+
+const roy = {
+  I: 'Ami',
+  love: 'taa maa-ke ',
+  you: 'valobashi',
+};
+
+const main = (
+  <h1>{utsho(roy)}</h1>
 );
-
-
-
 
 
 ReactDOM.render(
-  waw,
+  main,
   document.getElementById('root')
 );
+
+
+// function defination(para){
+//   return para.love + '' + para.sexy;
+// }
+
+
+
+// const para = {
+//   love : 'Sadia',
+//   sexy : 'kiss',
+
+// };
+
+
+// const waw = (
+//   <h1>{defination(para)}</h1>
+// );
+
+
+
+
+
+// ReactDOM.render(
+//   waw,
+//   document.getElementById('root')
+// );
 
 
 
