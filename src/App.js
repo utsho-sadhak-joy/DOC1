@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Parent from './Components/Child'
 
 function App() {
   return (
     <div className="App">
-      <h1>Utsho Sadhak Joy</h1>
+      <div> <Parent /> </div>
     </div>
   );
 }
