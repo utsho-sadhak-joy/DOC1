@@ -8,30 +8,62 @@ import ReactDOM from 'react-dom';
 
 
 
+function sadhak(title){
+  return title.fname + ' ' + title.lname
+};
 
-
-function utsho (roy) {
-  return roy.I + ' ' + roy.love + ' ' + roy.you
+const title = {
+  fname:'Sharmistha',
+  lname:'Mittra',
 };
 
 
 
 
-const roy = {
-  I: 'Ami',
-  love: 'taa maa-ke ',
-  you: 'valobashi',
-};
-
-const main = (
-  <h1>{utsho(roy)}</h1>
+const fullName = (
+  <h1>{sadhak(title)}</h1>
 );
+
+
 
 
 ReactDOM.render(
-  main,
+  fullName,
   document.getElementById('root')
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function utsho (roy) {
+//   return roy.I + ' ' + roy.love + ' ' + roy.you
+// };
+
+// const roy = {
+//   I: 'Ami',
+//   love: 'taa maa-ke ',
+//   you: 'valobashi',
+// };
+
+// const main = (
+//   <h1>{utsho(roy)}</h1>
+// );
+
+
+// ReactDOM.render(
+//   main,
+//   document.getElementById('root')
+// );
 
 
 // function defination(para){
