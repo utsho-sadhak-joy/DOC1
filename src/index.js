@@ -6,31 +6,70 @@ import ReactDOM from 'react-dom';
 // const joy = <h1>I love you {200*2 } </h1>;
 
 
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
 
-
-function sadhak(title){
-  return title.fname + ' ' + title.lname
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
 };
 
-const title = {
-  fname:'Sharmistha',
-  lname:'Mittra',
-};
-
-
-
-
-const fullName = (
-  <h1>{sadhak(title)}</h1>
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
 );
-
-
-
 
 ReactDOM.render(
-  fullName,
+  element,
   document.getElementById('root')
 );
+
+
+
+
+
+function getGreeting(user) {
+  if (user) {
+    return <h1>Hello, {formatName(user)}!</h1>;
+  }
+  return <h1>Hello, Stranger.</h1>;
+}
+
+
+
+
+
+
+
+
+
+
+
+// function sadhak(title){
+//   return title.fname + ' ' + title.lname
+// };
+
+// const title = {
+//   fname:'Sharmistha',
+//   lname:'Mittra',
+// };
+
+
+
+
+// const fullName = (
+//   <h1>{sadhak(title)}</h1>
+// );
+
+
+
+
+// ReactDOM.render(
+//   fullName,
+//   document.getElementById('root')
+// );
 
 
 
