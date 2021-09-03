@@ -42,53 +42,53 @@ import ReactDOM from 'react-dom';
 
 
 
-// function Waw(props){
-//   return <h1>Hi {props.name}</h1>
-// }
-
-
-// function Balaka(){
-//   return(
-//     <div>
-//       <Waw name="Puja"/>
-//       <Waw name="Sadia"/>
-//       <Waw name="Tandra"/>
-//       <Waw name="Oisharjo"/>
-//     </div>
-//   )
-// }
-
-
-// ReactDOM.render(
-//   <Balaka />,
-//   document.getElementById('root')
-// );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Welcome extends React.Component{
-  render() {
-    return <h1>Hi {this.props.name}</h1>
-  }
+function Waw(props){
+  return <h1>Hi {props.name}</h1>
 }
+
+
+function Balaka(){
+  return(
+    <div>
+      <Waw name="Puja"/>
+      <Waw name="Sadia"/>
+      <Waw name="Tandra"/>
+      <Waw name="Oisharjo"/>
+    </div>
+  )
+}
+
+
+ReactDOM.render(
+  <Balaka />,
+  document.getElementById('root')
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Welcome extends React.Component{
+//   render() {
+//     return <h1>Hi {this.props.name}</h1>
+//   }
+// }
 
 
 // const element = <Welcome name="Sharmistah"/>;
