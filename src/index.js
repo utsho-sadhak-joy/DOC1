@@ -100,22 +100,22 @@ import ReactDOM from 'react-dom';
 
 // 11111111111111111111111111111111111111111111111111111111111111111111111111111111111
 
-// function Welcomes ( props) {
-//   return <h1>Hi {props.name}</h1>
-// }
- 
-// const elements = <Welcomes name="Mou Biswas"/>;
-
-
-// ReactDOM.render(
-//   elements, document.getElementById('root')
-// );
-
-
-
-function raju(props){
-  return <h1>{props.space}</h1>;
+function Welcomes ( props) {
+  return <h1>Hi {props.name}</h1>
 }
+ 
+const elements = <Welcomes name="Mou Biswas"/>;
+
+
+ReactDOM.render(
+  elements, document.getElementById('root')
+);
+
+
+
+// function raju(props){
+//   return <h1>{props.space}</h1>;
+// }
 
 
 // const props = {
