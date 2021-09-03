@@ -165,34 +165,34 @@ import ReactDOM from 'react-dom';
 
 
 
-// const name = <h1>Sadia Rahaman</h1>
-// ReactDOM.render(name, document.getElementById('root'));
+const name = <h1>Sadia Rahaman</h1>
+ReactDOM.render(name, document.getElementById('root'));
 
 
 
 
-const name = 'Sadia';
-const joy = <h1>I love you {200*2 } </h1>;
+// const name = 'Sadia';
+// const joy = <h1>I love you {200*2 } </h1>;
 
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
-}
+// function formatName(user) {
+//   return user.firstName + ' ' + user.lastName;
+// }
 
-const user = {
-  firstName: 'Harper',
-  lastName: 'Perez'
-};
+// const user = {
+//   firstName: 'Harper',
+//   lastName: 'Perez'
+// };
 
-const element = (
-  <h1>
-    Hello, {formatName(user)}!
-  </h1>
-);
+// const element = (
+//   <h1>
+//     Hello, {formatName(user)}!
+//   </h1>
+// );
 
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   element,
+//   document.getElementById('root')
+// );
 
 
 
