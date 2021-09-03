@@ -12,57 +12,57 @@ import ReactDOM from 'react-dom';
 
 
 
-// function Adri(props){
-//   return <h1>My name is {props.name}</h1>
-// };
+function Adri(props){
+  return <h1>My name is {props.name}</h1>
+};
 
 
-// function Tandra(){
-//   return (
-//     <div>
-//       <Adri name="puja"/>
-//       <Adri name="cosmos"/>
-//       <Adri name="nila"/>
-//       <Adri name="Tithi"/>
-//     </div>
-//   )
-// };
-
-
-
-// ReactDOM.render(
-//   <Tandra />,
-//   document.getElementById('root')
-// )
-
-
-
-
-
-
-
-
-function Waw(props){
-  return <h1>Hi {props.name}</h1>
-}
-
-
-function Balaka(){
-  return(
+function Tandra(){
+  return (
     <div>
-      <Waw name="Puja"/>
-      <Waw name="Sadia"/>
-      <Waw name="Tandra"/>
-      <Waw name="Oisharjo"/>
+      <Adri name="puja"/>
+      <Adri name="cosmos"/>
+      <Adri name="nila"/>
+      <Adri name="Tithi"/>
     </div>
   )
-}
+};
+
 
 
 ReactDOM.render(
-  <Balaka />,
+  <Tandra />,
   document.getElementById('root')
-);
+)
+
+
+
+
+
+
+
+
+// function Waw(props){
+//   return <h1>Hi {props.name}</h1>
+// }
+
+
+// function Balaka(){
+//   return(
+//     <div>
+//       <Waw name="Puja"/>
+//       <Waw name="Sadia"/>
+//       <Waw name="Tandra"/>
+//       <Waw name="Oisharjo"/>
+//     </div>
+//   )
+// }
+
+
+// ReactDOM.render(
+//   <Balaka />,
+//   document.getElementById('root')
+// );
 
 
 
