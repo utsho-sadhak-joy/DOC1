@@ -5,6 +5,135 @@ import ReactDOM from 'react-dom';
 
 
 
+// function sum(2, 3){
+//   return 2+3;
+// }
+
+
+
+
+// function Adri(props){
+//   return <h1>My name is {props.name}</h1>
+// };
+
+
+// function Tandra(){
+//   return (
+//     <div>
+//       <Adri name="puja"/>
+//       <Adri name="cosmos"/>
+//       <Adri name="nila"/>
+//       <Adri name="Tithi"/>
+//     </div>
+//   )
+// };
+
+
+
+// ReactDOM.render(
+//   <Tandra />,
+//   document.getElementById('root')
+// )
+
+
+
+
+
+
+
+
+// function Waw(props){
+//   return <h1>Hi {props.name}</h1>
+// }
+
+
+// function Balaka(){
+//   return(
+//     <div>
+//       <Waw name="Puja"/>
+//       <Waw name="Sadia"/>
+//       <Waw name="Tandra"/>
+//       <Waw name="Oisharjo"/>
+//     </div>
+//   )
+// }
+
+
+// ReactDOM.render(
+//   <Balaka />,
+//   document.getElementById('root')
+// );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Welcome extends React.Component{
+//   render() {
+//     return <h1>Hi {this.props.name}</h1>
+//   }
+// }
+
+
+// const element = <Welcome name="Sharmistah"/>;
+
+
+// ReactDOM.render(
+//   element, document.getElementById('root')
+// );
+
+// 11111111111111111111111111111111111111111111111111111111111111111111111111111111111
+
+// function Welcomes ( props) {
+//   return <h1>Hi {props.name}</h1>
+// }
+ 
+// const elements = <Welcomes name="Mou Biswas"/>;
+
+
+// ReactDOM.render(
+//   elements, document.getElementById('root')
+// );
+
+
+
+// function raju(props){
+//   return <h1>{props.space}</h1>;
+// }
+
+
+// const props = {
+//   space: 'sakib',
+// }
+
+// const title = (
+//   <h1>Hi {raju(props)}</h1>
+// );
+
+
+// ReactDOM.render(
+//   title, document.getElementById('root')
+// );
+
+
+
+
 // function tick() {
 //   const element = (
 //     <div>
@@ -21,17 +150,17 @@ import ReactDOM from 'react-dom';
 
 
 
-function tick(){
-  const element = (
-    <div> 
-      <h1>Hello World!</h1>
-      <p>It is  {new Date().toLocaleTimeString()} </p>
-    </div>
-  );
-  ReactDOM.render(element,document.getElementById('root'),);
-};
+// function tick(){
+//   const element = (
+//     <div> 
+//       <h1>Hello World!</h1>
+//       <p>It is  {new Date().toLocaleTimeString()} </p>
+//     </div>
+//   );
+//   ReactDOM.render(element,document.getElementById('root'),);
+// };
 
-setInterval(tick,100)
+// setInterval(tick,100)
 
 
 
@@ -42,28 +171,28 @@ setInterval(tick,100)
 
 
 
-// const name = 'Sadia';
-// const joy = <h1>I love you {200*2 } </h1>;
+const name = 'Sadia';
+const joy = <h1>I love you {200*2 } </h1>;
 
-// function formatName(user) {
-//   return user.firstName + ' ' + user.lastName;
-// }
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
 
-// const user = {
-//   firstName: 'Harper',
-//   lastName: 'Perez'
-// };
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
 
-// const element = (
-//   <h1>
-//     Hello, {formatName(user)}!
-//   </h1>
-// );
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
 
-// ReactDOM.render(
-//   element,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
 
 
 
