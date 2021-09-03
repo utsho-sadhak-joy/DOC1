@@ -150,23 +150,24 @@ import ReactDOM from 'react-dom';
 
 
 
-// function tick(){
-//   const element = (
-//     <div> 
-//       <h1>Hello World!</h1>
-//       <p>It is  {new Date().toLocaleTimeString()} </p>
-//     </div>
-//   );
-//   ReactDOM.render(element,document.getElementById('root'),);
-// };
+function tick(){
+  const element = (
+    <div> 
+      <h1>Hello World!</h1>
+      <p>It is  {new Date().toLocaleTimeString()} </p>
+    </div>
+  );
+  ReactDOM.render(element,document.getElementById('root'),);
+};
 
-// setInterval(tick,100)
-
-
+setInterval(tick,100)
 
 
-const name = <h1>Sadia Rahaman</h1>
-ReactDOM.render(name, document.getElementById('root'));
+
+
+
+// const name = <h1>Sadia Rahaman</h1>
+// ReactDOM.render(name, document.getElementById('root'));
 
 
 
