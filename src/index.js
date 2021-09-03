@@ -113,9 +113,9 @@ import ReactDOM from 'react-dom';
 
 
 
-// function raju(props){
-//   return <h1>{props.space}</h1>;
-// }
+function raju(props){
+  return <h1>{props.space}</h1>;
+}
 
 
 // const props = {
@@ -134,17 +134,17 @@ import ReactDOM from 'react-dom';
 
 
 
-function tick() {
-  const element = (
-    <div>
-      <h1>Hello, world!</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  );
-  ReactDOM.render(element, document.getElementById('root'));
-}
+// function tick() {
+//   const element = (
+//     <div>
+//       <h1>Hello, world!</h1>
+//       <h2>It is {new Date().toLocaleTimeString()}.</h2>
+//     </div>
+//   );
+//   ReactDOM.render(element, document.getElementById('root'));
+// }
 
-setInterval(tick, 1000);
+// setInterval(tick, 1000);
 
 
 
