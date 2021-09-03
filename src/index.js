@@ -91,25 +91,25 @@ import ReactDOM from 'react-dom';
 // }
 
 
-// const element = <Welcome name="Sharmistah"/>;
-
-
-// ReactDOM.render(
-//   element, document.getElementById('root')
-// );
-
-// 11111111111111111111111111111111111111111111111111111111111111111111111111111111111
-
-function Welcomes ( props) {
-  return <h1>Hi {props.name}</h1>
-}
- 
-const elements = <Welcomes name="Mou Biswas"/>;
+const element = <Welcome name="Sharmistah"/>;
 
 
 ReactDOM.render(
-  elements, document.getElementById('root')
+  element, document.getElementById('root')
 );
+
+// 11111111111111111111111111111111111111111111111111111111111111111111111111111111111
+
+// function Welcomes ( props) {
+//   return <h1>Hi {props.name}</h1>
+// }
+ 
+// const elements = <Welcomes name="Mou Biswas"/>;
+
+
+// ReactDOM.render(
+//   elements, document.getElementById('root')
+// );
 
 
 
