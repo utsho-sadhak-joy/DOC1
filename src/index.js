@@ -5,35 +5,35 @@ import ReactDOM from 'react-dom';
 
 
 
-// function sum(2, 3){
-//   return 2+3;
-// }
+function sum(2, 3){
+  return 2+3;
+}
 
 
 
 
-function Adri(props){
-  return <h1>My name is {props.name}</h1>
-};
+// function Adri(props){
+//   return <h1>My name is {props.name}</h1>
+// };
 
 
-function Tandra(){
-  return (
-    <div>
-      <Adri name="puja"/>
-      <Adri name="cosmos"/>
-      <Adri name="nila"/>
-      <Adri name="Tithi"/>
-    </div>
-  )
-};
+// function Tandra(){
+//   return (
+//     <div>
+//       <Adri name="puja"/>
+//       <Adri name="cosmos"/>
+//       <Adri name="nila"/>
+//       <Adri name="Tithi"/>
+//     </div>
+//   )
+// };
 
 
 
-ReactDOM.render(
-  <Tandra />,
-  document.getElementById('root')
-)
+// ReactDOM.render(
+//   <Tandra />,
+//   document.getElementById('root')
+// )
 
 
 
