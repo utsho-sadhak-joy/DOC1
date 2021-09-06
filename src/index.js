@@ -68,7 +68,11 @@ this.setState((state,props)=>({
 
 
 
-
+this.setState(function(state,props){
+  return{
+    Counter: state.counter + props.increment
+  };
+});
 
 
 
