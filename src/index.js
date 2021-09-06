@@ -53,22 +53,9 @@ ReactDOM.render(<Clock />, document.getElementById('root'))
 
 
 
-
-
-// const element = <h1>waw</h1>;
-
-// ReactDOM.render(
-//   element,
-//   document.getElementById('root')
-
-// );
-
-
-
-
-
-
-
+this.setState((state,props)=>({
+  counter: state.counter + props.increment
+}));
 
 
 
