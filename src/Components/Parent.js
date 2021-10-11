@@ -1,10 +1,10 @@
 import React from 'react'
-import Child from './Child'
+
 
 const Parent = () => {
     return (
         <div>
-            <Child />
+            <h1>Utsho Sadhak Joy</h1>
         </div>
     )
 }

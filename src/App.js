@@ -1,5 +1,5 @@
 import React from 'react'
-import Parent from './Components/Child'
+import Parent from './Components/Parent'
 
 function App() {
   return (
