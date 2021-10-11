@@ -1,10 +1,10 @@
 import React from 'react'
-import Parent from './Components/Parent'
+import Glossary from './Components/Parent'
 
 function App() {
   return (
     <div className="App">
-      <div> <Parent /> </div>
+      <div> <Glossary /> </div>
     </div>
   );
 }
