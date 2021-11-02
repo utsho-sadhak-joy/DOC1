@@ -10,11 +10,13 @@ function App() {
 
 export default App;
 
-<table>
-  <tr>
-    <div>
-      <td>Hello</td>
-      <td>World</td>
-    </div>
-  </tr>
-</table>
+class Columns extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <td>Hello</td>
+        <td>World</td>
+      </React.Fragment>
+    );
+  }
+}
