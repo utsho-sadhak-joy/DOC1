@@ -16,4 +16,5 @@ render() {
     );
   }
 
-  const CommentWithRelay = Relay.createContainer(Comment, config);
+  // React Redux's `connect`
+const ConnectedComment = connect(commentSelector, commentActions)(CommentList);
