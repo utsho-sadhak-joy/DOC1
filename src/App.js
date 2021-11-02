@@ -1,12 +1,21 @@
 import React from 'react'
-import Glossary from './Components/Parent'
-
+import "./Components/App.css"
 function App() {
   return (
     <div className="App">
-      <div> <Glossary /> </div>
+      <div className="yes"> joy </div>
     </div>
   );
 }
 
 export default App;
+
+render() {
+  return (
+    <React.Fragment>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </React.Fragment>
+  );
+}
