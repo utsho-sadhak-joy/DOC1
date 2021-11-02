@@ -23,3 +23,7 @@ function Glossary(props) {
     </dl>
   );
 }
+
+
+a higher-order component is a function 
+that takes a component and returns a new component.
