@@ -17,12 +17,4 @@ render() {
   }
 
 
-  function withSubscription(WrappedComponent) {
-    class WithSubscription extends React.Component {/* ... */}
-    WithSubscription.displayName = `WithSubscription(${getDisplayName(WrappedComponent)})`;
-    return WithSubscription;
-  }
-  
-  function getDisplayName(WrappedComponent) {
-    return WrappedComponent.displayName || WrappedComponent.name || 'Component';
-  }
+  React’s diffing algorithm (called Reconciliation) uses component identity to determine whether it should update the existing subtree or throw it away and mount a new one. If the component returned from render is identical (===) to the component from the previous render, React recursively updates the subtree by diffing it with the new one. If they’re not equal, the previous subtree is unmounted completely.
