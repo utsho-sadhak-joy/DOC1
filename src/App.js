@@ -10,13 +10,11 @@ function App() {
 
 export default App;
 
-class Columns extends React.Component {
-  render() {
-    return (
-      <div>
-        <td>Hello</td>
-        <td>World</td>
-      </div>
-    );
-  }
-}
+<table>
+  <tr>
+    <div>
+      <td>Hello</td>
+      <td>World</td>
+    </div>
+  </tr>
+</table>
