@@ -17,9 +17,12 @@ render() {
   }
 
 
+  function withSubscription(WrappedComponent) {
+    class WithSubscription extends React.Component {/* ... */}
+    WithSubscription.displayName = `WithSubscription(${getDisplayName(WrappedComponent)})`;
+    return WithSubscription;
+  }
   
-// connect is a function that returns another function
-const enhance = connect(commentListSelector, commentListActions);
-// The returned function is a HOC, which returns a component that is connected
-// to the Redux store
-const ConnectedComment = enhance(CommentList);
+  function getDisplayName(WrappedComponent) {
+    return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+  }
