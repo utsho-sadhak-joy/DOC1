@@ -16,4 +16,4 @@ render() {
     );
   }
 
-  const NavbarWithRouter = withRouter(Navbar);
+  const CommentWithRelay = Relay.createContainer(Comment, config);
