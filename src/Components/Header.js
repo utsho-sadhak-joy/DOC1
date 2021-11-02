@@ -15,3 +15,5 @@ render() {
       />
     );
   }
+
+  const NavbarWithRouter = withRouter(Navbar);
