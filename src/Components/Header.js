@@ -1,8 +1,7 @@
-render() {
-    // A new version of EnhancedComponent is created on every render
-    // EnhancedComponent1 !== EnhancedComponent2
-    const EnhancedComponent = enhance(MyComponent);
-    // That causes the entire subtree to unmount/remount each time!
-    return <EnhancedComponent />;
-  }
-  
+/ Define a static method
+WrappedComponent.staticMethod = function() {/*...*/}
+// Now apply a HOC
+const EnhancedComponent = enhance(WrappedComponent);
+
+// The enhanced component has no static method
+typeof EnhancedComponent.staticMethod === 'undefined' // true
