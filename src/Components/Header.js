@@ -32,3 +32,9 @@ class Chosen extends React.Component {
       );
     }
   }
+
+
+  $('#container').html('<button id="btn">Say Hello</button>');
+$('#btn').click(function() {
+  alert('Hello!');
+});
