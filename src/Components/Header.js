@@ -124,3 +124,13 @@ class Mouse extends React.PureComponent {
       this.inputRef.current.focus();
     }
   }
+
+  class MyComponent extends React.Component {
+    constructor(props) {
+      super(props);
+      this.wrapper = React.createRef();
+    }
+    render() {
+      return <div ref={this.wrapper}>{this.props.children}</div>;
+    }
+  }
