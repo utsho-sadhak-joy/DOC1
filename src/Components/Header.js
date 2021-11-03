@@ -177,3 +177,35 @@ function Button() {
       }
     }
   }
+
+  function NameInput(props) {
+    return (
+      <p>
+        <input value={props.firstName} onChange={props.handleChange} />
+        <br />
+        My name is {props.firstName}.
+      </p>
+    );
+  }
+  
+  const BackboneNameInput = connectToBackboneModel(NameInput);
+  
+  function Example(props) {
+    function handleChange(e) {
+      props.model.set('firstName', e.target.value);
+    }
+  
+    return (
+      <BackboneNameInput
+        model={props.model}
+        handleChange={handleChange}
+      />
+  
+    );
+  }
+  
+  const model = new Backbone.Model({ firstName: 'Frodo' });
+  ReactDOM.render(
+    <Example model={model} />,
+    document.getElementById('root')
+  );
