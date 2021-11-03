@@ -1,30 +1,22 @@
-function App1() {
-    return <Greeting firstName="Ben" lastName="Hector" />;
-  }
-  
-  function App2() {
-    const props = {firstName: 'Ben', lastName: 'Hector'};
-    return <Greeting {...props} />;
+render() {
+    // No need to wrap list items in an extra element!
+    return [
+      // Don't forget the keys :)
+      <li key="A">First item</li>,
+      <li key="B">Second item</li>,
+      <li key="C">Third item</li>,
+    ];
   }
 
-  const Button = props => {
-    const { kind, ...other } = props;
-    const className = kind === "primary" ? "PrimaryButton" : "SecondaryButton";
-    return <button className={className} {...other} />;
-  };
+  function Item(props) {
+    return <li>{props.message}</li>;
+  }
   
-  const App = () => {
+  function TodoList() {
+    const todos = ['finish doc', 'submit pr', 'nag dan to review'];
     return (
-      <div>
-        <Button kind="primary" onClick={() => console.log("clicked!")}>
-          Hello World!
-        </Button>
-      </div>
+      <ul>
+        {todos.map((message) => <Item key={message} message={message} />)}
+      </ul>
     );
   }
-
-
-<MyContainer>
-  <MyFirstComponent />
-  <MySecondComponent />
-</MyContainer>
