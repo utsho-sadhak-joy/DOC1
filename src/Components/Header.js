@@ -1,16 +1,16 @@
-class AutoFocusTextInput extends React.Component {
+function MyFunctionComponent() {
+    return <input />;
+  }
+  
+  class Parent extends React.Component {
     constructor(props) {
       super(props);
       this.textInput = React.createRef();
     }
-  
-    componentDidMount() {
-      this.textInput.current.focusTextInput();
-    }
-  
     render() {
+      // This will *not* work!
       return (
-        <CustomTextInput ref={this.textInput} />
+        <MyFunctionComponent ref={this.textInput} />
       );
     }
   }
