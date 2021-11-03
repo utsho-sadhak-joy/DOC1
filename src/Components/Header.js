@@ -48,3 +48,7 @@ function Repeat(props) {
       minimizer: [new TerserPlugin({ /* additional options here */ })],
     },
   };
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return true;
+  }
