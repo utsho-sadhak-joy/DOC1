@@ -48,66 +48,9 @@ class Cat extends React.Component {
     }
   }
 
-  / If you really want a HOC for some reason, you can easily
-// create one using a regular component with a render prop!
-function withMouse(Component) {
-  return class extends React.Component {
-    render() {
-      return (
-        <Mouse render={mouse => (
-          <Component {...this.props} mouse={mouse} />
-        )}/>
-      );
-    }
-  }
-}
 
 
 
-<Mouse>
-  {mouse => (
-    <p>The mouse position is {mouse.x}, {mouse.y}</p>
-  )}
-</Mouse>
-
-class Mouse extends React.PureComponent {
-    // Same implementation as above...
-  }
-  
-  class MouseTracker extends React.Component {
-    render() {
-      return (
-        <div>
-          <h1>Move the mouse around!</h1>
-  
-          {/*
-            This is bad! The value of the `render` prop will
-            be different on each render.
-          */}
-          <Mouse render={mouse => (
-            <Cat mouse={mouse} />
-          )}/>
-        </div>
-      );
-    }
-  }
-
-  class MouseTracker extends React.Component {
-    // Defined as an instance method, `this.renderTheCat` always
-    // refers to *same* function when we use it in render
-    renderTheCat(mouse) {
-      return <Cat mouse={mouse} />;
-    }
-  
-    render() {
-      return (
-        <div>
-          <h1>Move the mouse around!</h1>
-          <Mouse render={this.renderTheCat} />
-        </div>
-      );
-    }
-  }
 
   class MyComponent extends React.Component {
     constructor(props) {
@@ -125,15 +68,7 @@ class Mouse extends React.PureComponent {
     }
   }
 
-  class MyComponent extends React.Component {
-    constructor(props) {
-      super(props);
-      this.wrapper = React.createRef();
-    }
-    render() {
-      return <div ref={this.wrapper}>{this.props.children}</div>;
-    }
-  }
+  
 
   class TopLevelRoute extends React.Component {
     constructor(props) {
@@ -234,19 +169,7 @@ MyComponent.propTypes = {
 };
 
 
-import PropTypes from 'prop-types';
 
-class MyComponent extends React.Component {
-  render() {
-    // This must be exactly one element or it will warn.
-    const children = this.props.children;
-    return (
-      <div>
-        {children}
-      </div>
-    );
-  }
-}
 
 MyComponent.propTypes = {
   children: PropTypes.element.isRequired
@@ -272,45 +195,27 @@ class Greeting extends React.Component {
   );
 
 
-  class Greeting extends React.Component {
-    static defaultProps = {
-      name: 'stranger'
-    }
-  
-    render() {
-      return (
-        <div>Hello, {this.props.name}</div>
-      )
-    }
-  }
 
   export default function HelloWorldComponent({ name }) {
     return (
       <div>Hello, {name}</div>
     )
   }
-  function HelloWorldComponent({ name }) {
-    return (
-      <div>Hello, {name}</div>
-    )
-  }
+ 
   
-  export default HelloWorldComponent
 
 
-  import PropTypes from 'prop-types'
 
-function HelloWorldComponent({ name }) {
-  return (
-    <div>Hello, {name}</div>
-  )
-}
+
+
+
+
 
 HelloWorldComponent.propTypes = {
   name: PropTypes.string
 }
 
-export default HelloWorldComponent
+
 
 
 class NameForm extends React.Component {
@@ -339,20 +244,6 @@ class NameForm extends React.Component {
   }
 
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input
-            defaultValue="Bob"
-            type="text"
-            ref={this.input} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
 
 
   class FileInput extends React.Component {
