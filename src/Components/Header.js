@@ -69,3 +69,20 @@ function Button() {
     <HelloButton />,
     document.getElementById('container')
   );
+
+
+  function Paragraph(props) {
+    return <p>{props.text}</p>;
+  }
+  
+  const ParagraphView = Backbone.View.extend({
+    render() {
+      const text = this.model.get('text');
+      ReactDOM.render(<Paragraph text={text} />, this.el);
+      return this;
+    },
+    remove() {
+      ReactDOM.unmountComponentAtNode(this.el);
+      Backbone.View.prototype.remove.call(this);
+    }
+  });
