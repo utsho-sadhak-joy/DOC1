@@ -134,3 +134,11 @@ class Mouse extends React.PureComponent {
       return <div ref={this.wrapper}>{this.props.children}</div>;
     }
   }
+
+  class TopLevelRoute extends React.Component {
+    constructor(props) {
+      super(props);
+  
+      SharedApplicationState.recordEvent('ExampleComponent');
+    }
+  }
