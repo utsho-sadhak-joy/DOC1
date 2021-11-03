@@ -40,13 +40,11 @@ function Repeat(props) {
   }
 
 
-  <div>
-  {showHeader && <Header />}
-  <Content />
-</div>
+  const TerserPlugin = require('terser-webpack-plugin');
 
-<div>
-  {props.messages.length &&
-    <MessageList messages={props.messages} />
-  }
-</div>
+  module.exports = {
+    mode: 'production',
+    optimization: {
+      minimizer: [new TerserPlugin({ /* additional options here */ })],
+    },
+  };
