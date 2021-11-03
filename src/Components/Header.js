@@ -285,3 +285,7 @@ function NumberDescriber(props) {
     }
     return <div>{props.number} is an {description} number</div>;
   }
+
+  <MyComponent message="hello world" />
+
+<MyComponent message={'hello world'} />
