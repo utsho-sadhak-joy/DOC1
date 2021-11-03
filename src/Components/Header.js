@@ -247,3 +247,41 @@ function HelloWorld() {
   // Correct! React knows <Hello /> is a component because it's capitalized.
   return <Hello toWhat="World" />;
 }
+
+import React from 'react';
+import { PhotoStory, VideoStory } from './stories';
+
+const components = {
+  photo: PhotoStory,
+  video: VideoStory
+};
+
+function Story(props) {
+  // Wrong! JSX type can't be an expression.
+  return <components[props.storyType] story={props.story} />;
+}
+
+import React from 'react';
+import { PhotoStory, VideoStory } from './stories';
+
+const components = {
+  photo: PhotoStory,
+  video: VideoStory
+};
+
+function Story(props) {
+  // Correct! JSX type can be a capitalized variable.
+  const SpecificStory = components[props.storyType];
+  return <SpecificStory story={props.story} />;
+}
+
+
+function NumberDescriber(props) {
+    let description;
+    if (props.number % 2 == 0) {
+      description = <strong>even</strong>;
+    } else {
+      description = <i>odd</i>;
+    }
+    return <div>{props.number} is an {description} number</div>;
+  }
