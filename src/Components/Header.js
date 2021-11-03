@@ -142,3 +142,12 @@ function Repeat(props) {
       words: state.words.concat(['marklar'])
     }));
   }
+
+  render() {
+    // React mounts a new div and renders the children into it
+    return (
+      <div>
+        {this.props.children}
+      </div>
+    );
+  }
