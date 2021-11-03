@@ -1,8 +1,1 @@
-componentDidMount() {
-    this.$el = $(this.el);
-    this.$el.chosen();
-  }
-  
-  componentWillUnmount() {
-    this.$el.chosen('destroy');
-  }
+<select className="Chosen-select" ref={el => this.el = el}>
