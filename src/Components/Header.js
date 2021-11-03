@@ -22,3 +22,9 @@ function App1() {
       </div>
     );
   }
+
+
+<MyContainer>
+  <MyFirstComponent />
+  <MySecondComponent />
+</MyContainer>
