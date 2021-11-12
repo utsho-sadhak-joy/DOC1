@@ -270,3 +270,13 @@ TestRenderer.create(
   }
 );
 expect(focused).toBe(true);
+import 'core-js/es/map';
+import 'core-js/es/set';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
