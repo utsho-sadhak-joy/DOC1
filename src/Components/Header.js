@@ -70,4 +70,14 @@ class Cat extends React.Component {
 
   
 
+  function Example() {
+    return (
+      <input
+        onFocus={(e) => {
+          console.log('Focused on input');
+        }}
+        placeholder="onFocus is triggered when you click this input."
+      />
+    )
+  }
   
