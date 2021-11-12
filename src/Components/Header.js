@@ -235,3 +235,38 @@ act(() => {
 
 // make assertions on root 
 expect(root.toJSON()).toMatchSnapshot();
+
+
+import TestRenderer from 'react-test-renderer';
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.input = null;
+  }
+  componentDidMount() {
+    this.input.focus();
+  }
+  render() {
+    return <input type="text" ref={el => this.input = el} />
+  }
+}
+
+let focused = false;
+TestRenderer.create(
+  <MyComponent />,
+  {
+    createNodeMock: (element) => {
+      if (element.type === 'input') {
+        // mock a focus function
+        return {
+          focus: () => {
+            focused = true;
+          }
+        };
+      }
+      return null;
+    }
+  }
+);
+expect(focused).toBe(true);
