@@ -33,3 +33,18 @@ class Example extends React.Component {
     );
   }
 }
+
+
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+
+  class waw extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state={count: 0};
+    }
+  }
