@@ -132,3 +132,69 @@ class FriendStatusWithCounter extends React.Component {
         ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
       };
     });
+
+
+
+    componentDidMount() {
+      ChatAPI.subscribeToFriendStatus(
+        this.props.friend.id,
+        this.handleStatusChange
+      );
+    }
+  
+    componentDidUpdate(prevProps) {
+      // Unsubscribe from the previous friend.id
+      ChatAPI.unsubscribeFromFriendStatus(
+        prevProps.friend.id,
+        this.handleStatusChange
+      );
+      // Subscribe to the next friend.id
+      ChatAPI.subscribeToFriendStatus(
+        this.props.friend.id,
+        this.handleStatusChange
+      );
+    }
+  
+    componentWillUnmount() {
+      ChatAPI.unsubscribeFromFriendStatus(
+        this.props.friend.id,
+        this.handleStatusChange
+      );
+    }
+
+    function FriendStatus(props) {
+      // ...
+      useEffect(() => {
+        // ...
+        ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+        return () => {
+          ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+        };
+      });
+
+
+      // Mount with { friend: { id: 100 } } props
+ChatAPI.subscribeToFriendStatus(100, handleStatusChange);     // Run first effect
+
+// Update with { friend: { id: 200 } } props
+ChatAPI.unsubscribeFromFriendStatus(100, handleStatusChange); // Clean up previous effect
+ChatAPI.subscribeToFriendStatus(200, handleStatusChange);     // Run next effect
+
+// Update with { friend: { id: 300 } } props
+ChatAPI.unsubscribeFromFriendStatus(200, handleStatusChange); // Clean up previous effect
+ChatAPI.subscribeToFriendStatus(300, handleStatusChange);     // Run next effect
+
+// Unmount
+ChatAPI.unsubscribeFromFriendStatus(300, handleStatusChange); // Clean up last effect
+
+
+useEffect(() => {
+  function handleStatusChange(status) {
+    setIsOnline(status.isOnline);
+  }
+
+  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+  return () => {
+    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+  };
+}, [props.friend.id]); // Only re-subscribe if props.friend.id changes
