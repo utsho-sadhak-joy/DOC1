@@ -7,7 +7,7 @@ function FriendStatus(props) {
   return isOnline ? 'Online' : 'Offline';
 }
 function FriendListItem(props) {
-  const isOnline = useFriendStatus(props.friend.id);
+  const isOnline = useFriendStatus(props.friend.id)
 
   return (
     <li style={{ color: isOnline ? 'green' : 'black' }}>
