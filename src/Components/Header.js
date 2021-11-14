@@ -1,17 +1,15 @@
-function FriendStatus(props) {
-  const isOnline = useFriendStatus(props.friend.id);
+import React, { useState } from 'react';
 
-  if (isOnline === null) {
-    return 'Loading...';
-  }
-  return isOnline ? 'Online' : 'Offline';
-}
-function FriendListItem(props) {
-  const isOnline = useFriendStatus(props.friend.id)
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
 
   return (
-    <li style={{ color: isOnline ? 'green' : 'black' }}>
-      {props.friend.name}
-    </li>
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
   );
 }
